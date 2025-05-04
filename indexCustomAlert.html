@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Popup Box</title>
+    <!-- Css Link -->
+     <link rel="stylesheet" href="style26.css">
+    <!-- Font Awesome 5 icon Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.click').click(function(){
+                $('.popup_box').css({
+                    "opacity": "1", "pointer-events":"auto"
+                });
+            });
+            $('.btn1').click(function(){
+                $('.popup_box').css({
+                    "opacity":"0", "pointer-events":"none"
+                });
+            });
+            $('.btn2').click(function(){
+                $('.popup_box').css({
+                    "opacity":"0", "pointer-events":"none"
+                });
+                alert("Your Account Deleted Success")
+                $('.click').text("Account Deleted Successfully.")
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#" class="click">Click Me</a>
+    <div class="popup_box">
+        <i class="fas fa-exclamation"></i>
+        <h1>Your account will be deleted permanently!</h1>
+        <label>Are you sure to proceed?</label>
+        <div class="btns">
+            <a href="#" class="btn1">Cancel Process</a>
+            <a href="#" class="btn2">Delete Account</a>
+        </div>
+    </div>
+</body>
+</html>
